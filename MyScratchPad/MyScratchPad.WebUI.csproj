@@ -477,16 +477,20 @@
     <Content Include="ag-grid\src\ts\widgets\component.ts" />
     <Content Include="ag-grid\src\ts\widgets\menuList.ts" />
     <Content Include="ag-grid\src\ts\widgets\popupService.ts" />
+    <Content Include="apps\factory\homeFactory.js" />
+    <Content Include="apps\HomeController.js" />
+    <Content Include="apps\GoldenWithGridController.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\goldenlayout-base.css" />
     <Content Include="Content\goldenlayout-dark-theme.css" />
     <Content Include="Content\goldenlayout-light-theme.css" />
-    <Content Include="Dashboard.html" />
+    <Content Include="Home.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="GoldenLayoutWithGrid.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ag-grid\.idea\.name" />
@@ -542,6 +546,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="apps\controllers\" />
+    <Folder Include="apps\mockdata\" />
     <Folder Include="apps\partialviews\" />
     <Folder Include="App_Data\" />
   </ItemGroup>

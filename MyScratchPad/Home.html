@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Janu Dashboard</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!--BOOTSTRAP START-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -17,8 +18,18 @@
     <script src="Scripts/goldenlayout.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-</head>
-<body>
 
+    <!--AG GRID COMPONENT-->
+    <link href="ag-grid/dist/styles/ag-grid.css" rel="stylesheet" />
+    <link href="ag-grid/dist/styles/theme-dark.css" rel="stylesheet" />
+    <link href="ag-grid/dist/styles/theme-fresh.css" rel="stylesheet" />
+    
+    <script src="ag-grid/dist/ag-grid.js"></script>
+    <script src="apps\HomeController.js"></script>
+</head>
+
+
+<body class="container-fluid" oncontextmenu="return false;" ng-app>
+    using link https://golden-layout.com/examples/
 </body>
 </html>
