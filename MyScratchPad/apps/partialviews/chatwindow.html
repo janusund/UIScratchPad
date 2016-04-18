@@ -1,0 +1,1223 @@
+﻿<section>
+    <div id="chatwindow">
+        <div id="messagewindow">
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+            <p>Daniel wrote: Great party yesterday</p>
+            <p>Alex wrote: stil hungover</p>
+            <p>Chris: great party? nah.</p>
+            <p>Sam: what party</p>
+            <p>jenny: partytime!</p>
+        </div>
+        <div id="inputcontainer"><p>Your message</p></div>
+    </div>
+</section>
+
+<div id="chatwindow" style="position: relative; height: 100%;">
+    <div id="messagewindow" style="position: absolute; left: 0; right: 0; overflow: auto; top: 0; bottom: 3em; ">
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+        <p>Daniel wrote: Great party yesterday</p>
+        <p>Alex wrote: stil hungover</p>
+        <p>Chris: great party? nah.</p>
+        <p>Sam: what party</p>
+        <p>jenny: partytime!</p>
+    </div>
+    <div id="inputcontainer" style="position: absolute; left: 0; right: 0;display: block; bottom: 0; <!--height: 1em;--> padding: .5em; margin-top: 1em; "><p>Your message</p></div>
+</div>
+
+<!--Example impleted in dahsboard mcm-->
+<section style="height:100%;width:100%" class="ng-scope">
+    <section ng-controller="tempNotesController" style="width:99.6%;height:80%;margin-left:5px;" class="ng-scope">
+        <panel-ribbon class="panelRibbon" ng-class="group">
+            <div class="panelListView" ng-class="ribbonDirectives?'panelListViewBlock':''">
+                <div class="panelLeft">
+                    <div class="panelBtn"><button class="paramsBtn ng-pristine ng-untouched ng-valid ng-binding" name="Active" ng-model="notes.buttonName" ng-click="noteEvent(notes)">Show Archive</button></div>
+                </div> <!-- panel left-->
+                <div class="panelRight">
+                    <div title="Export" class="symbol symbolRight"><span class="glyphicon glyphicon-export" ng-click="exportToCsv()"></span></div>
+                </div> <!-- panel right-->
+            </div>
+            <!-- ngIf: showGrouping == true -->  <!-- Panel grouping on resize-->
+        </panel-ribbon>
+
+
+
+        <div class="notesWrapper" style="width: 100%;position: relative;height: 100%;">
+            <div class="noteLogs" style="position: absolute;height: 90%;left: 0;right: 0;overflow: auto;top: 0;bottom: 3em;">
+                <!-- ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 2:43:30 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Testing Insert Statement to sql</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 2:44:00 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Successfully inserted</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 3:43:34 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Display notes in view</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 5:02:39 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Checlking Archive function</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 5:03:58 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Add Notes and show</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 10, 2016 5:05:50 PM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Testing Add notes</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 10:21:01 AM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Removed Archived</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 11:00:15 AM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Checking Active status</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 11:03:23 AM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">340 Portfolio selected</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 11:16:21 AM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Testing sorting</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 11:16:35 AM  vijayr:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Testing 527 sorting</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 11, 2016 3:49:16 PM  robertt:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Rob testing</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:11 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test Notes</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:33 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test Active</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:35 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:41 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:41 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:42 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:42 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:42 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:43 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:43 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:43 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:13:43 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:19:11 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:19:11 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:19:17 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 4:19:17 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 16, 2016 1:51:33 PM  robertt:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Cashflow coming in 2 week on 3/15</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 17, 2016 5:54:29 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">%</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 17, 2016 5:54:39 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">%%%%%%</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 17, 2016 5:55:18 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 17, 2016 5:55:20 AM  :</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 3:25:27 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test Signer</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:40:44 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">This is active test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:45:38 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:45:38 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:48:45 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">aDASDSadasd</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:53:52 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test Drive</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 24, 2016 6:53:52 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test Drive</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 28, 2016 7:48:31 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 28, 2016 7:48:31 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Mar 30, 2016 9:48:00 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Tedt</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:19:15 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">Test</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:20:34 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">TEST</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:29:06 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">aCTIVE</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:30:26 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">teST</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:35:36 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">dafdsf</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:36:02 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">jhjhgj</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:36:07 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">fjhj</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:37:27 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">fhjhgj</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:38:21 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">sdfsdf</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:38:27 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">sdfsdfsdfdsfsdf</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:38:45 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">hgjhj</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:40:36 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">dfsdffsdfdsq</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 1, 2016 6:49:54 AM  rushikeshc:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding">sdfsdfsdf</div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes --><div class="tempNoteContents ng-scope" ng-repeat="items in content.notes">
+                    <div class="eachContent">
+                        <div class="userNotes">
+
+                            <div class="notes">
+                                <b class="ng-binding">Apr 15, 2016 12:15:23 PM  janus:</b> <a href="#" ng-click="archiveNotes(items)" class="ng-binding">
+                                    <span class="glyphicon glyphicon-folder-close"></span> Archive
+                                </a>
+                            </div>
+
+
+                            <div class="notes ng-binding"></div>
+                        </div>  <!--userNotes-->
+
+                        <div class="noteAction">
+
+                        </div>  <!--noteAction-->
+                    </div> <!--eachContent-->
+
+                </div><!-- end ngRepeat: items in content.notes -->
+            </div>
+            <div class="noteTextArea" style="/* display: block; */ bottom: 0; /* padding: .5em; */ margin-top: 8em; /* position: absolute;*/ left: 0; right: 0; /* top: 4px; */ height: 10%; /*height: 17px;*/ ">
+                <textarea ng-model="notes.textContent" placeholder="Reply here" class="ng-pristine ng-untouched ng-valid" style="
+    width: 100%;
+"></textarea>
+                <!-- Notes content-->
+                <div class="noteBtn" style="
+    position: absolute;
+    right: 0px;
+"><button class="noteBtn" style="background-color:grey;" name="Add" ng-click="addNotes()">Reply</button></div>
+            </div>
+        </div>
+
+
+    </section>
+</section>-->

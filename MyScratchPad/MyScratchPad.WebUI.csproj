@@ -480,6 +480,7 @@
     <Content Include="apps\factory\homeFactory.js" />
     <Content Include="apps\HomeController.js" />
     <Content Include="apps\GoldenWithGridController.js" />
+    <Content Include="apps\partialviews\chatwindow.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\goldenlayout-base.css" />
@@ -547,7 +548,6 @@
   <ItemGroup>
     <Folder Include="apps\controllers\" />
     <Folder Include="apps\mockdata\" />
-    <Folder Include="apps\partialviews\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

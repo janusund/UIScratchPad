@@ -12,7 +12,11 @@ var config = {
             {
                 type: 'component',
                 componentName: 'example',
-                componentState: { text: 'Component 1' }
+                componentState: {
+                    module: 'portfolioActivity',
+                    templateId: 'userNameTemplate',
+                    //text: 'Component 1'
+                }
             },
           {
               type: 'component',
@@ -31,7 +35,14 @@ var config = {
 var myLayout = new GoldenLayout(config);
 
 myLayout.registerComponent('example', function (container, state) {
-    container.getElement().html('<h2>' + state.text + '</h2>');
+    if (state.text == undefined) {
+        var templateHtml = $('#' + state.templateId).html();
+        container.getElement().html(templateHtml);
+    }
+    else {
+        container.getElement().html('<h2>' + state.text + '</h2>');
+    }
 });
 
 myLayout.init();
+
