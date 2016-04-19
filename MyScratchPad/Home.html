@@ -20,11 +20,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
     <!--AG GRID COMPONENT-->
-    <link href="ag-grid/dist/styles/ag-grid.css" rel="stylesheet" />
+    <!--<link href="ag-grid/dist/styles/ag-grid.css" rel="stylesheet" />
     <link href="ag-grid/dist/styles/theme-dark.css" rel="stylesheet" />
     <link href="ag-grid/dist/styles/theme-fresh.css" rel="stylesheet" />
     
-    <script src="ag-grid/dist/ag-grid.js"></script>
+    <script src="ag-grid/dist/ag-grid.js"></script>-->
+    <!--AG GRID COMPONENT-->
+    <link href="ag-grid-enterprise-master/dist/styles/ag-grid.css" rel="stylesheet" />
+    <link href="ag-grid-enterprise-master/dist/styles/theme-dark.css" rel="stylesheet" />
+    <link href="ag-grid-enterprise-master/dist/styles/theme-fresh.css" rel="stylesheet" />
+
+    <script src="AG-Grid-4.0/dist/ag-grid-enterprise.js"></script>
     <script src="apps\HomeController.js"></script>
 
     <link href="Content/Site.css"  rel="stylesheet"/>
@@ -32,14 +38,14 @@
 </head>
 
 
-<body class="container-fluid" oncontextmenu="return false;" ng-app>
+<body class="container-fluid" oncontextmenu="return false;" ng-app="maindashboardmodule" ng-controller="maindashController">
     using link https://golden-layout.com/examples/
 
 
-
+    
 
     <template type="text/html" id="aggrid">
-        <div ag-grid="gridOptions" class="ag-dark" style="width: 100%; height: 100%;"></div>
+        <div ag-grid="gridOptions" class="ag-fresh" style="width: 100%; height: 100%;"></div>
 
     </template>
 
